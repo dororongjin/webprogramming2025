@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="textstyle.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <style>
+      body {
+        overflow-y: hidden;
+      }
+    </style>
+
+    <img src="asset/bg1.png" class="bg1-img" />
+    <img src="asset/pin.png" class="pin-img" id="pin" />
+    <img src="asset/pin2.png" class="pin2-img" id="pin2" />
+    <img src="asset/boom.png" class="boom-img" id="boom" />
+    <img src="asset/reze.png" class="reze-img" id="reze" />
+    <img src="asset/denzi.png" class="denzi-img" id="denzi" />
+    <img src="asset/starter.png" class="starter-img" id="starter" />
+    <img src="asset/blood.png" class="blood-img" id="blood" />
+    <img src="asset/title.png" class="title-img" id="title" />
+    <audio id="starter-music" src="asset/starter1s.mp3" preload="auto"></audio>
+    <audio id="bomb-sound" src="asset/bomb.mp3" preload="auto"></audio>
+    <audio id="rattle-sound" src="asset/rattle.mp3" preload="auto"></audio>
+    <h1 id="main-text">きみだけ</h1>
+    <h1 id="second-text">大正解</h1>
+  </body>
+  <style>
+    .bg1-img {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      left: 0%;
+      object-fit: cover;
+      object-position: 20% 50%;
+    }
+    .pin2-img {
+      display: block;
+      width: 50px
+      right: 0%;
+      position: absolute;
+      top: 515px;
+      right: -120px;
+
+      transition-property: transform;
+      transition: transform 0.5s ease-out;
+      opacity: 1;
+      cursor: pointer;
+    }
+    .pin-img {
+      display: block;
+      width: 50px;
+      position: absolute;
+      top: 500px;
+      right: 20px;
+
+      transition-property: transform;
+      transition: transform 0.5s ease-out;
+      opacity: 1;
+      cursor: pointer;
+
+      transform-origin: 75% 10%;
+    }
+
+    .pin-img:hover {
+      transform: rotate(50deg);
+    }
+
+    .boom-img {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      opacity: 1;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .reze-img {
+      display: none;
+      width: 810px;
+
+      position: absolute;
+      top: 27px;
+      right: 629px;
+      opacity: 0;
+
+      transition: opacity 1.5s ease-out;
+    }
+
+    .title-img {
+      display: none;
+      width: 1000px;
+
+      position: absolute;
+      top: 800px;
+      right: 1080px;
+      transform: translateX(50%);
+      opacity: 0;
+
+      transition: opacity 1.5s ease-out;
+    }
+
+    .starter-img {
+      display: block;
+      width: 800px;
+      position: absolute;
+      top: 500px;
+      left: -600px;
+
+      transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+      opacity: 1;
+    }
+
+    .blood-img {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0px;
+      left: -400px;
+      opacity: 0;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+
+
+    .denzi-img {
+      display: none;
+      width: 810px;
+
+      position: absolute;
+      top: 75px;
+      left: 721px;
+      opacity: 0;
+
+      transform: translateX(-300px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+     #main-text, #second-text {
+       position: absolute;
+       top: 10%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+
+        font-size: 108px;
+        font-weight: 1000;
+         color: white;
+          text-shadow: 2px 2px 4px #000;
+           opacity: 0;
+           display: none;}
+      #second-text {
+
+        top: 65%;
+        left: 65%;
+         transform: translate(-50%, -50%);
+         font-size: 108px;
+        }
+  </style>
+</html>
